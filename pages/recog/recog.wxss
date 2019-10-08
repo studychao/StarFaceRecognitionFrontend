@@ -1,0 +1,16 @@
+/* pages/recog/recog.wxss */
+.a_button{
+  height:90rpx;
+  width:400rpx;
+  background-color: #0094ff;
+  color:#FFF;
+  font-size:35rpx;
+}
+
+.recog_view{
+  margin-top:50rpx;
+}
+
+.image_preview{
+    margin-top:30rpx;
+}

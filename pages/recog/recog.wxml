@@ -1,0 +1,15 @@
+<!--pages/recog/recog.wxml-->
+<view class="recog_view">
+  <button class="a_button" bindtap="getImage">导入源图片</button>
+</view>
+<view class="image_preview">
+  <text>图片预览</text>
+</view>
+<view class="image_preview">
+  <image src="{{photos}}" mode="aspectFit"></image>
+</view>
+<view class="recog_view">
+  <form bindsumbit="recognize">
+    <button class="a_button" form-type="submit">识别歌星</button>
+  </form>
+</view>
