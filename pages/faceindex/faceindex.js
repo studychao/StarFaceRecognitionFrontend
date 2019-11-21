@@ -1,66 +1,74 @@
 // pages/faceindex/faceindex.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+    inputShowed: false,
+    inputVal: ""
+  },
+  showInput: function () {
+    this.setData({
+      inputShowed: true
+    });
+  },
+  hideInput: function () {
+    this.setData({
+      inputVal: "",
+      inputShowed: false
+    });
+  },
+  clearInput: function () {
+    this.setData({
+      inputVal: ""
+    });
+  },
+  inputTyping: function (e) {
+    this.setData({
+      inputVal: e.detail.value
+    });
 
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  singerinfo: function (e) {
+    var $this = this;
+    var name = e.currentTarget.dataset.name;
+    console.log(name);
+    wx.request({
+      url: 'http://101.132.38.226/musician',
+      method: 'GET',
+      data: {
+        name: name,
+      },
+      success(e) {
+        console.log(e.data);
+        console.log(typeof (e.data))
+        var songlist = JSON.stringify(e.data);
+        console.log(songlist)
+        wx.navigateTo({
+          url: '../singer/singer?songlist=' + encodeURIComponent(songlist)
+        })
+      }
+    })
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  search: function (e) {
+    var name = e.detail.value;
+    console.log(name);
+    wx.request({
+      url: 'http://101.132.38.226/musician',
+      method: 'GET',
+      data: {
+        name: name,
+      },
+      success(e) {
+        console.log(e.data);
+        console.log(typeof (e.data))
+        var songlist = JSON.stringify(e.data);
+        console.log(songlist)
+        wx.navigateTo({
+          url: '../singer/singer?songlist=' + encodeURIComponent(songlist)
+        })
+      }
+    })
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+});

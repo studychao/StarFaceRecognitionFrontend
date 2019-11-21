@@ -1,2 +1,92 @@
 <!--pages/faceindex/faceindex.wxml-->
+<view class="page">
+ <!-- <view class="page__hd">
+    <view class="page__title">今日音悦</view>
+    <view class="page__desc">歌星识别助手</view>
+  </view> -->
+ 
+   <view class="page__bd page__bd_spacing">
+      <view class="weui-cells__title">点击进入音悦世界</view>
+      <view class="page__bd">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="search"/>
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+       
+    </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item"><view class="placeholder" data-name='林俊杰' bindtap="singerinfo">林俊杰</view></view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item"><view class="placeholder" data-name='李荣浩' bindtap="singerinfo">李荣浩</view></view>
+            <view class="weui-flex__item"><view class="placeholder" data-name='蔡依林' bindtap="singerinfo">蔡依林</view></view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item"><view class="placeholder" data-name='邓紫棋' bindtap="singerinfo">邓紫棋</view></view>
+            <view class="weui-flex__item"><view class="placeholder" data-name='李荣浩' bindtap="singerinfo">李荣浩</view></view>
+            <view class="weui-flex__item"><view class="placeholder" data-name='张杰' bindtap="singerinfo">张杰</view></view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item"><view class="placeholder" data-name='林宥嘉' bindtap="singerinfo">林宥嘉</view></view>
+            <view class="weui-flex__item"><view class="placeholder" data-name='吴亦凡' bindtap="singerinfo">吴亦凡</view></view>
+            <view class="weui-flex__item"><view class="placeholder" data-name='华晨宇' bindtap="singerinfo">华晨宇</view></view>
+            <view class="weui-flex__item"><view class="placeholder" data-name='许嵩' bindtap="singerinfo">许嵩</view></view>
+        </view>
+        <view class="weui-flex">
+            <view><view class="placeholder" data-name='朴树' bindtap="singerinfo">朴树</view></view>
+            <view class="weui-flex__item"><view class="placeholder" data-name='易烊千玺' bindtap="singerinfo">易烊千玺</view></view>
+            <view><view class="placeholder" data-name='薛之谦' bindtap="singerinfo">薛之谦</view></view>
+        </view>
+    </view>
+         <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">发现音悦</view>
+            <view class="weui-panel__bd">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="/images/b1.jpg" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">周杰伦&五月天《倔强2019》，万人泪目大合唱</view>
+                        <view class="weui-media-box__desc">五月天出道20周年演唱会的第一场，周杰伦以嘉宾身份到场。两首合唱《倔强》《说好不哭》，将气氛燃至高点。唱完后天空飘起小雨，与沸腾的空气交织，也和全场3万人的眼泪融在一起。</view>
+                    </view>
+                </navigator>
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="/images/b2.jpg" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">王以太的新专辑《演.说.家》，或是本年度最佳？</view>
+                        <view class="weui-media-box__desc">10月10日，王以太发布了自签约第四音乐的首张录音室专辑《演.说.家》。在这张专辑中，王以太一共收录了14首全新歌曲，每首歌无论从编曲还是到作词，都是精益求精；同时，在编曲上也将说唱音乐和当下的主流音乐风格相融合。</view>
+                    </view>
+                </navigator>
+            </view>
+            <view class="weui-panel__ft">
+                <view class="weui-cell weui-cell_access weui-cell_link">
+                    <view class="weui-cell__bd">查看更多</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+  <!-- <view class="page__bd">
+  <image src="/images/mic.jpg" mode="aspectFill">  
+</image> 
+  </view> -->
+  <view class="weui-footer">
+    <view class="weui-footer__text">Copyright © 2019-2019 Ecust-SE</view>
+  </view>
+</view>
 

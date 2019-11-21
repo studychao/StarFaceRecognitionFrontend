@@ -3,12 +3,13 @@
     "pages/faceindex/faceindex",
     "pages/recog/recog",
     "pages/index/index",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/result/result"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#0094ff",
-    "navigationBarTitleText": "歌星识别助手",
+    "backgroundColor": "#EDEDED",
+    "navigationBarBackgroundColor": "#009966",
+    "navigationBarTitleText": "音悦台",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -26,7 +27,7 @@
         "selectedIconPath": "images/recogs.png"
       },
       {
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/index/index",
         "text": "我的",
         "iconPath": "images/mine.png",
         "selectedIconPath": "images/mines.png"

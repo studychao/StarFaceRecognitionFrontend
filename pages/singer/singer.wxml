@@ -1,0 +1,50 @@
+<!--pages/singer/singer.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">{{author}}</view>
+        <view class="page__desc">{{author}}</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-article">
+            <!-- <view class="weui-article__h1">大标题</view> -->
+            <view class="weui-article__section">
+            
+                    <view class="weui-article__p">
+                        <image class="weui-article__img" src="{{pic}}" mode="aspectFill" style="height: 180px" />
+                    </view>
+                    <view class="weui-article__h2">取自《{{album}}》歌曲《{{name}}》</view>
+                <!-- <view class="weui-article__h2">个人信息</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">经历</view>
+                    <view class="weui-article__p">
+                       2008年凭借歌曲《青花瓷》获得第19届金曲奖最佳作曲人奖 [9]  。2009年入选美国CNN评出的“25位亚洲最具影响力的人物” [10]  ；同年凭借专辑《魔杰座》获得第20届金曲奖最佳国语男歌手奖 [11]  。2010年入选美国《Fast Company》评出的“全球百大创意人物” [12]  。2011年凭借专辑《跨时代》再度获得金曲奖最佳国语男歌手奖，并且第4次获得金曲奖最佳国语专辑奖 [13]  ；同年主演好莱坞电影《青蜂侠》 [14]  。2012年登福布斯中国名人榜榜首 [15]  。2014年发行华语乐坛首张数字音乐专辑《哎呦，不错哦》 [16]  。2018年举行“地表最强2”世界巡回演唱会
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">主要作品</view>
+                    <view class="weui-article__p">
+                       01.	屋顶	
+02.	东风破	
+03.	简单爱	
+04.	借口	
+05.	安静	
+06.	安静	
+07.	可爱女人	
+08.	黄金甲	
+09.	龙卷风	
+10.	米兰的小铁匠	
+11.	开不了口	
+12.	黑色幽默
+                    </view>
+                </view>-->
+            </view>
+        </view>
+    </view>
+</view>
+<view class="music">
+  <audio bindtimeupdate="MusicStart" bindended="MusicEnd" poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop>
+  <view class="free-MusicProgress">
+  <view style="width:{{progress}}%;"></view>
+  </view>
+</audio>
+</view>

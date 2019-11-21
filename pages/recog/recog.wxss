@@ -2,7 +2,7 @@
 .a_button{
   height:90rpx;
   width:400rpx;
-  background-color: #0094ff;
+  background-color: #1eda37;
   color:#FFF;
   font-size:35rpx;
 }
@@ -13,4 +13,34 @@
 
 .image_preview{
     margin-top:30rpx;
+}
+
+icon{
+    margin-right: 13px;
+}
+.page__bd {
+    margin-top:30rpx;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: left;
+}
+.icon-box{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.icon-box__ctn{
+    flex-shrink: 100;
+}
+.icon-box__title{
+    font-size: 20px;
+}
+.icon-box__desc{
+    margin-top: 6px;
+    font-size: 12px;
+    color: #888888;
+}
+.icon_sp_area {
+    margin-top: 10px;
+    text-align: left;
 }
