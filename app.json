@@ -4,7 +4,11 @@
     "pages/recog/recog",
     "pages/index/index",
     "pages/mine/mine",
-    "pages/result/result"
+    "pages/result/result",
+    "pages/singer/singer",
+    "pages/age/age",
+    "pages/history/history",
+    "pages/collection/collection"
   ],
   "window": {
     "backgroundColor": "#EDEDED",

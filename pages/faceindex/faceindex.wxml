@@ -30,7 +30,7 @@
             <view class="weui-flex__item"><view class="placeholder" data-name='林俊杰' bindtap="singerinfo">林俊杰</view></view>
         </view>
         <view class="weui-flex">
-            <view class="weui-flex__item"><view class="placeholder" data-name='李荣浩' bindtap="singerinfo">李荣浩</view></view>
+            <view class="weui-flex__item"><view class="placeholder" data-name='陈奕迅' bindtap="singerinfo">李荣浩</view></view>
             <view class="weui-flex__item"><view class="placeholder" data-name='蔡依林' bindtap="singerinfo">蔡依林</view></view>
         </view>
         <view class="weui-flex">
@@ -50,6 +50,11 @@
             <view><view class="placeholder" data-name='薛之谦' bindtap="singerinfo">薛之谦</view></view>
         </view>
     </view>
+        <view class="weui-flex">
+    <view bindtap='agetest' hover-class="changestyle" class='link' >
+     <image src="/images/趣味年龄.png" class='linkimg'></image>
+</view>
+</view>
          <view class="page__bd">
         <view class="weui-panel weui-panel_access">
             <view class="weui-panel__hd">发现音悦</view>

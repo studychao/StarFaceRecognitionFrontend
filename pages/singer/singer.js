@@ -88,5 +88,7 @@ Page({
     that.setData({
       progress: progress
     })
-  }
+  },
+
+
 })
