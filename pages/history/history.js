@@ -1,4 +1,5 @@
 // pages/history/history.js
+var app = getApp()
 Page({
 
   /**
@@ -12,6 +13,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.request({
+      url: 'http://127.0.0.1:7001/history/search?UID=' + app.globalData.openid,
+      method: "GET",
+      success(res){
+        console.log(res.data)
+      }
+    })
 
   },
 
