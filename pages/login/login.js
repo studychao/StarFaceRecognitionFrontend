@@ -7,14 +7,14 @@ Page({
   data: {
     //判断小程序的API，回调，参数，组件等是否在当前版本可用。
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    isHide: false
+    isHide: false,
+    time:2
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
-    console.log("hi")
     var that = this;
     // 查看是否授权
     wx.getSetting({
@@ -35,10 +35,7 @@ Page({
                     url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wx0b0d40d4268eb527&secret=3ef68269f3915ec06b9fcbb664f23dba&js_code=' + res.code + '&grant_type=authorization_code',
                       success: res => {
                           // 获取到用户的 openid
-                        wx.switchTab
-                          ({
-                            url: '/pages/faceindex/faceindex'
-                          })
+                        
                           var UID = res.data.openid
                           console.log(app.globalData.openid)
                           app.globalData.openid = UID
@@ -55,6 +52,19 @@ Page({
                             },
                             success(res) {
                               console.log(res.data)
+                              var count = setInterval(() => {
+                                that.setData({
+                                  time: that.data.time - 1
+                                });
+                                if (that.data.time == 0) {
+                                  wx.switchTab
+                                    ({
+                                      url: '/pages/faceindex/faceindex'
+                                    })
+                                  clearInterval(count);
+                                }
+                              }, 1000);
+                              
                             }
                           })
                         

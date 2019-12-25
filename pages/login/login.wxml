@@ -15,4 +15,9 @@
     </view>
     <view wx:else>请升级微信版本</view>
 </view>
+
+<view wx:else>
+<view class="start"><image src='/images/start.png'></image></view>
+
+</view>
  
