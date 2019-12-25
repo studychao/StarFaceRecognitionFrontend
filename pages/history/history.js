@@ -6,18 +6,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      item:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     wx.request({
       url: 'http://127.0.0.1:7001/history/search?UID=' + app.globalData.openid,
       method: "GET",
       success(res){
-        console.log(res.data)
+        that.setData({
+          'item' : res.data
+        })
+        console.log(that.data.item)
       }
     })
 
@@ -70,5 +74,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  historydetail : function(){
+    wx.redirectTo({
+      url: '/pages/history/detail/detail',
+    })
   }
 })
